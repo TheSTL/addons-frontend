@@ -7,11 +7,6 @@ $icon-default-size: 32px;
 .SearchResult {
   list-style-type: none;
   margin: 0 0 1px;
-
-  .SearchResult-wrapper {
-    outline: none;
-    text-decoration: none;
-  }
 }
 
 .SearchResult-title {
@@ -22,13 +17,11 @@ $icon-default-size: 32px;
   word-wrap: anywhere;
 }
 
-.SearchResult-result {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  max-width: $theme-width-default;
-  padding: 0;
-  width: 100%;
+  &:focus {
+    .SearchResult-title {
+      outline: 1px dotted $link-color;
+    }
+  }
 }
 
 .SearchResult-wrapper {
@@ -41,16 +34,9 @@ $icon-default-size: 32px;
     }
   }
 
-  &:focus,
   &:hover {
     .SearchResult-title {
       color: $link-color;
-    }
-  }
-
-  &:focus {
-    .SearchResult-title {
-      outline: 1px dotted $link-color;
     }
   }
 }
